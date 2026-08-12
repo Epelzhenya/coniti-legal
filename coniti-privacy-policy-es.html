@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Coniti — Política de privacidad</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; line-height: 1.6; color: #1a1a1a; background: #fff; }
+  h1 { font-size: 26px; margin-bottom: 4px; }
+  h2 { font-size: 19px; margin-top: 36px; }
+  p, li { font-size: 15.5px; }
+  .updated { color: #666; font-size: 13.5px; margin-bottom: 32px; }
+  .langs { font-size: 13px; margin-bottom: 20px; }
+  .langs a { color: #4f46e5; margin-right: 10px; text-decoration: none; }
+  ul { padding-left: 22px; }
+  a { color: #4f46e5; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; font-size: 14px; vertical-align: top; }
+  th { background: #f5f5f7; }
+</style>
+</head>
+<body>
+<p class="langs">🌐 <a href="coniti-privacy-policy.html">Русский</a> · <a href="coniti-privacy-policy-en.html">English</a> · <a href="coniti-privacy-policy-es.html">Español</a> · <a href="coniti-privacy-policy-uk.html">Українська</a></p>
+<h1>Política de privacidad de Coniti</h1>
+<p class="updated">Fecha de entrada en vigor: 11 de agosto de 2026</p>
+
+<p>Coniti (en adelante, «nosotros», «la aplicación») respeta tu privacidad. Este documento explica qué datos procesamos cuando usas la aplicación móvil Coniti, para qué y con quién los compartimos.</p>
+
+<h2>1. Quiénes somos</h2>
+<p>El desarrollador de la aplicación es Coniti. Para cualquier pregunta sobre privacidad o tratamiento de datos, contáctanos en <a href="mailto:epelzhenya@gmail.com">epelzhenya@gmail.com</a>.</p>
+
+<h2>2. Qué datos procesamos</h2>
+<table>
+<tr><th>Datos</th><th>Para qué</th><th>Dónde se guardan</th></tr>
+<tr><td>Identificador de usuario anónimo</td><td>Se crea automáticamente al primer inicio para vincular el estado de la suscripción y la evaluación por IA con tu dispositivo. No está vinculado a tu nombre, email ni otros datos personales.</td><td>Supabase (servidor)</td></tr>
+<tr><td>Historial de intentos (tema, texto de la respuesta, puntuación)</td><td>Para mostrarte tu historial de entrenamientos y logros.</td><td>Solo de forma local en tu dispositivo (no se envía al servidor)</td></tr>
+<tr><td>Texto de la transcripción de voz (solo suscripción Pro)</td><td>Se envía al servidor para que el modelo de IA evalúe tu respuesta. La grabación de audio en sí nunca se envía ni se guarda — solo se procesa el texto final.</td><td>Se envía a través de una Supabase Edge Function a Anthropic (Claude) para su análisis; no lo conservamos a largo plazo</td></tr>
+<tr><td>Entrada de voz (audio)</td><td>Se convierte en texto mediante el servicio de reconocimiento de voz de tu dispositivo (Apple Speech Recognition en iOS, Google en Android).</td><td>Procesado por el servicio de reconocimiento de voz de Apple/Google según sus propias políticas de privacidad; el audio nunca llega a nuestros servidores</td></tr>
+<tr><td>Estado y datos de la suscripción</td><td>Para desbloquear las funciones Pro y desactivar los anuncios.</td><td>RevenueCat, sincronizado con nuestra base de datos (Supabase) mediante tu identificador anónimo</td></tr>
+<tr><td>Identificadores publicitarios y datos de visualización de anuncios</td><td>Para mostrar anuncios a los usuarios gratuitos (los usuarios Pro no ven anuncios).</td><td>Google AdMob — según la política de privacidad de Google</td></tr>
+</table>
+
+<h2>3. Lo que NO recopilamos</h2>
+<ul>
+<li>Nombre, email o número de teléfono — no se requiere registro en la aplicación, se usa autenticación anónima.</li>
+<li>Grabaciones de tu voz — no se guardan en la aplicación, solo se procesan brevemente para convertirlas en texto.</li>
+<li>Tu ubicación.</li>
+</ul>
+
+<h2>4. Terceros con los que compartimos datos</h2>
+<ul>
+<li><strong>Supabase</strong> — alojamiento de la base de datos y la lógica del servidor (Edge Functions).</li>
+<li><strong>Anthropic (Claude API)</strong> — analiza el texto de la transcripción para la evaluación por IA (solo usuarios Pro, solo texto).</li>
+<li><strong>RevenueCat</strong> — gestión de suscripciones y compras.</li>
+<li><strong>Google AdMob</strong> — muestra anuncios a los usuarios gratuitos.</li>
+<li><strong>Apple / Google</strong> — reconocimiento de voz mediante el sistema operativo del dispositivo.</li>
+</ul>
+<p>No vendemos tus datos a terceros.</p>
+
+<h2>5. Conservación y eliminación de datos</h2>
+<p>El historial de intentos se guarda localmente en tu dispositivo y está totalmente bajo tu control — puedes borrarlo en cualquier momento desde Ajustes de la aplicación («Borrar historial de intentos») o desinstalando la aplicación.</p>
+<p>Para solicitar la eliminación de los datos asociados al identificador anónimo de tu dispositivo en el servidor (estado de suscripción, etc.), contáctanos en <a href="mailto:epelzhenya@gmail.com">epelzhenya@gmail.com</a> — los eliminaremos en un plazo razonable.</p>
+
+<h2>6. Menores</h2>
+<p>La aplicación no está dirigida a menores de 13 años y no recopilamos conscientemente datos de usuarios de esa edad.</p>
+
+<h2>7. Cambios en esta política</h2>
+<p>Podemos actualizar este documento de vez en cuando. La versión vigente siempre está disponible en este mismo enlace; la fecha de actualización se indica al principio de la página.</p>
+
+<h2>8. Contacto</h2>
+<p>Preguntas sobre privacidad — <a href="mailto:epelzhenya@gmail.com">epelzhenya@gmail.com</a>.</p>
+</body>
+</html>
