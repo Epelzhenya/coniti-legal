@@ -22,7 +22,7 @@
 <body>
 <p class="langs">🌐 <a href="coniti-privacy-policy.html">Русский</a> · <a href="coniti-privacy-policy-en.html">English</a> · <a href="coniti-privacy-policy-es.html">Español</a> · <a href="coniti-privacy-policy-uk.html">Українська</a></p>
 <h1>Coniti Privacy Policy</h1>
-<p class="updated">Effective date: August 11, 2026</p>
+<p class="updated">Effective date: September 10, 2026</p>
 
 <p>Coniti ("we", "the app") respects your privacy. This document explains what data we process when you use the Coniti mobile app, why, and who we share it with.</p>
 
@@ -34,7 +34,9 @@
 <tr><th>Data</th><th>Why</th><th>Where it's stored</th></tr>
 <tr><td>Anonymous user ID</td><td>Created automatically on first launch to link your subscription status and AI grading to your specific device. Not linked to your name, email, or other personal data.</td><td>Supabase (server)</td></tr>
 <tr><td>Attempt history (topic, spoken answer text, score)</td><td>Used to show your training history and achievements.</td><td>Stored only locally on your device (never sent to our server)</td></tr>
-<tr><td>Speech transcript text (Pro subscription only)</td><td>Sent to our server so the AI model can grade your answer. The audio recording itself is never sent or stored — only the final transcript text is processed.</td><td>Sent through a Supabase Edge Function to Anthropic (Claude) for analysis; not retained by us long-term</td></tr>
+<tr><td>Speech transcript text (Pro subscription only)</td><td>Sent to our server so the AI model can grade your answer, and — if you choose to start a quiz on your own answers — to build questions from your past explanations. The audio recording itself is never sent or stored; only the final transcript text is processed.</td><td>Sent through a Supabase Edge Function to Anthropic (Claude) for analysis; not retained by us long-term</td></tr>
+<tr><td>Photos and PDFs you upload (Pro subscription only)</td><td>If you choose a photo of your notes, take a picture of a page, or attach a PDF, the file is sent to our server so the AI can pull out key study points from it. The app never scans your gallery and has no access to files you didn't pick yourself.</td><td>Sent through a Supabase Edge Function to Anthropic (Claude) for processing; stored neither by us nor by Anthropic, and not used to train models</td></tr>
+<tr><td>Your stated learning goal (Pro subscription only)</td><td>The text or dictated phrase describing what you want to learn is sent to our server so the AI can turn it into a program of topics. The resulting program is then stored only on your device.</td><td>Sent through a Supabase Edge Function to Anthropic (Claude); not retained by us long-term</td></tr>
 <tr><td>Voice input (audio)</td><td>Converted to text by your device's built-in speech recognition service (Apple Speech Recognition on iOS, Google on Android).</td><td>Processed by Apple's/Google's speech recognition service under their own privacy policies; audio is never sent to our servers</td></tr>
 <tr><td>Subscription status and data</td><td>Used to unlock Pro features and turn off ads.</td><td>RevenueCat, synced with our database (Supabase) via your anonymous ID</td></tr>
 <tr><td>Advertising identifiers and ad impression data</td><td>Used to show ads to free users (Pro users never see ads).</td><td>Google AdMob — governed by Google's privacy policy</td></tr>
@@ -50,7 +52,7 @@
 <h2>4. Third parties we share data with</h2>
 <ul>
 <li><strong>Supabase</strong> — database hosting and server-side logic (Edge Functions).</li>
-<li><strong>Anthropic (Claude API)</strong> — analyzes your transcript text for AI grading (Pro users only, text only).</li>
+<li><strong>Anthropic (Claude API)</strong> — analyzes your transcript text for AI grading and quiz questions, and processes photos/PDFs you upload and the learning goal you describe (Pro users only).</li>
 <li><strong>RevenueCat</strong> — manages subscriptions and purchases.</li>
 <li><strong>Google AdMob</strong> — shows ads to free users.</li>
 <li><strong>Apple / Google</strong> — on-device speech recognition provided by the operating system.</li>
